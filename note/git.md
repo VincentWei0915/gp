@@ -12,6 +12,7 @@ Git 下載路徑：https://git-scm.com/downloads
 - git add：追蹤檔案
 - git commit -m "標示提交原因"
     - -m:message
+- git log：日誌
 
 
 - 檔案狀態：
@@ -19,3 +20,7 @@ Git 下載路徑：https://git-scm.com/downloads
     - tracked 已追蹤
     - staged 已暫存
     - commited 已提交
+
+![alt text](image.png)代表有修改
+![alt text](image-1.png)代表未追蹤
+![alt text](image-2.png)已加入暫存
