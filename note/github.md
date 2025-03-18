@@ -1,0 +1,5 @@
+- git remote add origin https://github.com/VincentWei0915/gp.git:連結雲端資料庫
+- git branch -M 新的分支名稱
+    - branch：分支管理
+    - -M：重新命名
+- git push -u origin main
