@@ -28,5 +28,7 @@ Git 追蹤的是檔案的變化而非檔案本身
     - commited 已提交
 
 ![alt text](image.png)代表有修改
+
 ![alt text](image-1.png)代表未追蹤
+
 ![alt text](image-2.png)已加入暫存
