@@ -1,3 +1,4 @@
+# Github 筆記
 - git remote add origin https://github.com/VincentWei0915/gp.git:連結雲端資料庫
 - git branch -M main
     - branch：分支管理
