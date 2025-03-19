@@ -1,7 +1,8 @@
+# Git筆記
 Git 下載路徑：https://git-scm.com/downloads
 Git 追蹤的是檔案的變化而非檔案本身
 
-基礎指令：
+## 基礎指令：
 - git --version：檢查版本
 - git config --gloabl user.name：設定使用者名稱
 - git config --gloabl user.email：設定使用者電子郵件
@@ -21,7 +22,7 @@ Git 追蹤的是檔案的變化而非檔案本身
     - 需要重新 commit 創建新的快照
 - git reset --hard：提檔並刪除該快照後的快照
     
-- 檔案狀態：
+## 檔案狀態：
     - untrack 未追蹤
     - tracked 已追蹤
     - staged 已暫存
