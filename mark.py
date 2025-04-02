@@ -4,15 +4,24 @@ import os
 
 # ✅ MediaPipe 對應 Dlib 68 的 Index 清單
 dlib_68_to_mediapipe = [
-    234, 93, 132, 58, 172, 136, 150, 149, 176, 148, 152, 377, 400, 378, 379, 365, 397,  # Jaw
-    70, 63, 105, 66, 107,                                                              # Left eyebrow
-    336, 296, 334, 293, 300,                                                           # Right eyebrow
-    168, 6, 197, 195,                                                                   # Nose bridge
-    5, 98, 327, 326, 2,                                                                 # Nose base
-    33, 160, 158, 133, 153, 144,                                                        # Left eye
-    362, 385, 387, 263, 373, 380,                                                       # Right eye
-    61, 146, 91, 181, 84, 17, 314, 405, 321, 375, 291, 308,                             # Outer lips
-    78, 191, 80, 81, 82, 13, 312                                                        # Inner lips
+    # Jawline
+    227, 34, 137, 177, 215, 135, 170, 171, 175, 396, 395, 364, 435, 401, 366, 264, 447,
+    # Left eyebrow
+    70, 63, 105, 66, 107,
+    # Right eyebrow
+    336, 296, 334, 293, 300,
+    # Nose bridge
+    168, 197, 5, 1, 2,
+    # Nose bottom
+    455, 328, 235, 99,
+    # Left eye
+    33, 160, 158, 133, 153, 144,
+    # Right eye
+    362, 385, 387, 263, 373, 380,
+    # Outer lips
+    76, 39, 37, 0, 267, 269, 306, 321, 314, 17, 84, 91, 61, 291,
+    # Inner lips
+    86, 15, 316, 82, 13, 312
 ]
 
 mp_face_mesh = mp.solutions.face_mesh
@@ -29,7 +38,7 @@ with mp_face_mesh.FaceMesh(
     min_tracking_confidence=0.5
 ) as face_mesh:
 
-    for i in range(3):  # ← 可改多一點
+    for i in range(914,1000):  
         i_str = str(i).zfill(3)
         print(f"\U0001f5bc️ 處理影片 {i_str}")
 
@@ -56,7 +65,7 @@ with mp_face_mesh.FaceMesh(
                 break
 
             frame_count += 1
-            print(f"[📷] 正在處理第 {frame_count} 幀...")
+            # print(f"[📷] 正在處理第 {frame_count} 幀...")
 
             try:
                 image_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
